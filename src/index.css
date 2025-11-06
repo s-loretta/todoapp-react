@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui" { 
+  themes : night
+};
+
+.gradient-text {
+    background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #f093fb 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
