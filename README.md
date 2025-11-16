@@ -1,78 +1,78 @@
-🚀 TODO-App: Priorisez et Organisez vos Tâches
-Une application simple et efficace, conçue pour vous aider à classer vos tâches quotidiennes en fonction de leur niveau d'importance (Urgent, Moyen, Bas) et à gérer votre productivité.
+# 🚀 TODO-App: Priorisez et Organisez vos Tâches
 
-💻 Technologies Utilisées
+> **Une application minimaliste et réactive, conçue pour vous aider à classer vos tâches quotidiennes en fonction de leur niveau d'importance (Urgent, Moyen, Bas) et à gérer votre productivité.**
+
+---
+
+## 💻 Technologies Utilisées
+
 Ce projet est construit sur une stack moderne, légère et performante, garantissant une excellente expérience de développement et une interface utilisateur soignée.
 
-Frontend Framework : React (avec Hooks)
+* **Frontend Framework** : **React** (avec Hooks)
+* **Langage** : **TypeScript** (pour un code robuste et typé)
+* **Bundler & Tooling** : **Vite**
+* **Styling & UI** : **Tailwind CSS**
+* **Composants UI** : **DaisyUI** (en utilisant le thème `night`)
+* **Icônes** : **Lucide-React**
 
-Langage : TypeScript (pour un code robuste et typé)
+---
 
-Bundler & Tooling : Vite
+## ✨ Fonctionnalités (Features)
 
-Styling & UI : Tailwind CSS
+L'application `TODO-App` offre une expérience utilisateur fluide, centrée sur la gestion des priorités et la persistance des données :
 
-Composants UI : DaisyUI (en utilisant le thème night)
+* **Gestion des Priorités** : Chaque tâche peut être assignée à l'un des trois niveaux : **Urgente**, **Moyenne**, ou **Basse**.
+* **Ajout de Tâches** : Ajouter de nouvelles tâches via un champ de saisie simple.
+* **Filtrage Dynamique** : Visualiser les tâches filtrées par priorité ou afficher la liste complète (Tous). Les compteurs sont affichés pour chaque catégorie (Urgent, Moyen, Basse).
+* **Persistance des Données** : La liste des tâches est automatiquement sauvegardée dans le **Local Storage** du navigateur.
+* **Marquage & Suppression par Sélection** : Les tâches peuvent être sélectionnées via une case à cocher. Un bouton permet de supprimer toutes les tâches sélectionnées en une seule action.
+* **Interface Utilisateur** : L'application utilise le thème **Night** de DaisyUI pour un design sombre et le style `gradient-text` personnalisé pour le titre.
 
-Icônes : Lucide-React
+---
 
-✨ Fonctionnalités (Features)
-L'application TODO-App propose les fonctionnalités suivantes, centrées sur la gestion des priorités :
+## 🛠️ Processus de Création
 
-Gestion des Priorités : Chaque tâche peut être assignée à l'un des trois niveaux : Urgente, Moyenne, ou Basse.
+Le développement a été guidé par les principes de la modernité et de la clarté du code :
 
-Ajout de Tâches : Ajouter de nouvelles tâches via un champ de saisie simple.
+1.  **Fondations Modernes** : Le projet a été initialisé avec **Vite** et **TypeScript** pour bénéficier d'une vitesse de développement optimale et d'un code fortement typé.
+2.  **Architecture et Style** : Utilisation du composant fonctionnel `App.tsx` comme conteneur principal et d'un composant dédié `TodoItem.tsx` pour chaque élément, favorisant la réutilisabilité.
+3.  **Intégration du Style** : **Tailwind CSS** et **DaisyUI** ont été intégrés (`vite.config.ts`, `index.css`) pour accélérer la conception de l'interface en se concentrant sur les classes utilitaires.
+4.  **Logique Métier Avancée** : Le système d'état inclut la gestion de la priorité, du filtre actif, et d'un `Set` pour la sélection multiple des tâches, simplifiant l'action de "Finir la sélection".
 
-Filtrage par Priorité : Afficher uniquement les tâches correspondant à une priorité spécifique ("Tous," "Urgent," "Moyen," ou "Basse").
+---
 
-Marquage & Suppression par Sélection : Les tâches peuvent être sélectionnées via une case à cocher, permettant de les marquer comme terminées en groupe ou de les supprimer individuellement.
+## ⚙️ Démarrer le Projet Localement
 
-Persistance des Données : La liste des tâches est automatiquement sauvegardée dans le Local Storage du navigateur.
+Suivez ces instructions pour cloner et exécuter l'application sur votre machine.
 
-Interface Réactive : L'interface utilise une mise en page flexible pour s'adapter à différentes tailles d'écran (mobile-friendly).
+### Prérequis
 
-🛠️ Processus de Création
-Ce projet a été construit en se concentrant sur une architecture claire et une interface utilisateur agréable, en s'appuyant sur des outils modernes :
+Assurez-vous que les logiciels suivants sont installés sur votre système :
 
-Initialisation avec Vite et TypeScript : Utilisation du template React + TypeScript de Vite pour un démarrage rapide et l'exploitation des avantages du typage statique.
+* **Node.js** (recommandé v18+)
+* **Git**
 
-Choix de Tailwind CSS et DaisyUI : Intégration de Tailwind CSS pour un développement rapide de l'interface (vite.config.ts), complété par DaisyUI pour fournir des composants UI stylisés, en particulier le thème night pour un look sombre et moderne.
+### 1. Clonage du Répertoire
 
-Implémentation de la Logique de Priorité : La fonctionnalité clé repose sur la structure de données Todo (dans App.tsx et TodoItem.tsx) qui inclut un champ priority de type "Urgente" | "Moyenne" | "Basse".
+Ouvrez votre terminal et clonez le dépôt :
 
-Gestion de l'État : L'état global des tâches (todos), de l'entrée utilisateur (input), de la priorité sélectionnée (priority) et de la sélection des tâches à terminer (selectedTodos) est géré par des useState et des useEffect pour la persistance locale.
-
-⚙️ Démarrer le Projet Localement
-Suivez ces instructions pour mettre en place et lancer l'application sur votre machine de développement.
-
-Prérequis
-Vous devez avoir installé :
-
-Node.js (recommandé v18+)
-
-npm (ou un autre gestionnaire de paquets comme yarn ou pnpm)
-
-1. Clonage du Répertoire
-Ouvrez votre terminal et exécutez la commande pour récupérer le code :
-
-Bash
-
-git clone https://github.com/s-loretta/todoapp-react
+```bash
+git clone [https://github.com/s-loretta/todoapp-react](https://github.com/s-loretta/todoapp-react)
 cd todoapp-react
 2. Installation des Dépendances
-Installez toutes les dépendances du projet :
+Installez tous les modules nécessaires listés dans package.json :
 
 Bash
 
 npm install
 # ou
 yarn install
-3. Lancement du Serveur de Développement
-Démarrez l'application en mode développement. Elle bénéficiera du Hot Module Replacement (HMR) grâce à Vite :
+3. Lancement du Projet
+Démarrez l'application en mode développement en utilisant le script dev :
 
 Bash
 
 npm run dev
 # ou
 yarn dev
-L'application sera accessible dans votre navigateur, généralement à l'adresse suivante : http://localhost:5173/.
+L'application sera lancée par Vite et accessible dans votre navigateur, généralement à l'adresse http://localhost:5173/.
