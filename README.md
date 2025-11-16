@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+🚀 TODO-App: Priorisez et Organisez vos Tâches
+Une application simple et efficace, conçue pour vous aider à classer vos tâches quotidiennes en fonction de leur niveau d'importance (Urgent, Moyen, Bas) et à gérer votre productivité.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💻 Technologies Utilisées
+Ce projet est construit sur une stack moderne, légère et performante, garantissant une excellente expérience de développement et une interface utilisateur soignée.
 
-Currently, two official plugins are available:
+Frontend Framework : React (avec Hooks)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Langage : TypeScript (pour un code robuste et typé)
 
-## React Compiler
+Bundler & Tooling : Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Styling & UI : Tailwind CSS
 
-## Expanding the ESLint configuration
+Composants UI : DaisyUI (en utilisant le thème night)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Icônes : Lucide-React
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✨ Fonctionnalités (Features)
+L'application TODO-App propose les fonctionnalités suivantes, centrées sur la gestion des priorités :
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Gestion des Priorités : Chaque tâche peut être assignée à l'un des trois niveaux : Urgente, Moyenne, ou Basse.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Ajout de Tâches : Ajouter de nouvelles tâches via un champ de saisie simple.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Filtrage par Priorité : Afficher uniquement les tâches correspondant à une priorité spécifique ("Tous," "Urgent," "Moyen," ou "Basse").
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Marquage & Suppression par Sélection : Les tâches peuvent être sélectionnées via une case à cocher, permettant de les marquer comme terminées en groupe ou de les supprimer individuellement.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Persistance des Données : La liste des tâches est automatiquement sauvegardée dans le Local Storage du navigateur.
+
+Interface Réactive : L'interface utilise une mise en page flexible pour s'adapter à différentes tailles d'écran (mobile-friendly).
+
+🛠️ Processus de Création
+Ce projet a été construit en se concentrant sur une architecture claire et une interface utilisateur agréable, en s'appuyant sur des outils modernes :
+
+Initialisation avec Vite et TypeScript : Utilisation du template React + TypeScript de Vite pour un démarrage rapide et l'exploitation des avantages du typage statique.
+
+Choix de Tailwind CSS et DaisyUI : Intégration de Tailwind CSS pour un développement rapide de l'interface (vite.config.ts), complété par DaisyUI pour fournir des composants UI stylisés, en particulier le thème night pour un look sombre et moderne.
+
+Implémentation de la Logique de Priorité : La fonctionnalité clé repose sur la structure de données Todo (dans App.tsx et TodoItem.tsx) qui inclut un champ priority de type "Urgente" | "Moyenne" | "Basse".
+
+Gestion de l'État : L'état global des tâches (todos), de l'entrée utilisateur (input), de la priorité sélectionnée (priority) et de la sélection des tâches à terminer (selectedTodos) est géré par des useState et des useEffect pour la persistance locale.
+
+⚙️ Démarrer le Projet Localement
+Suivez ces instructions pour mettre en place et lancer l'application sur votre machine de développement.
+
+Prérequis
+Vous devez avoir installé :
+
+Node.js (recommandé v18+)
+
+npm (ou un autre gestionnaire de paquets comme yarn ou pnpm)
+
+1. Clonage du Répertoire
+Ouvrez votre terminal et exécutez la commande pour récupérer le code :
+
+Bash
+
+git clone https://github.com/s-loretta/todoapp-react
+cd todoapp-react
+2. Installation des Dépendances
+Installez toutes les dépendances du projet :
+
+Bash
+
+npm install
+# ou
+yarn install
+3. Lancement du Serveur de Développement
+Démarrez l'application en mode développement. Elle bénéficiera du Hot Module Replacement (HMR) grâce à Vite :
+
+Bash
+
+npm run dev
+# ou
+yarn dev
+L'application sera accessible dans votre navigateur, généralement à l'adresse suivante : http://localhost:5173/.
